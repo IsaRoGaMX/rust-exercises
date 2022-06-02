@@ -2,7 +2,6 @@ fn main() {
     println!("Hello Rustaceans!");
 
     variables_and_constants();
-    data_types();
 }
 
 fn variables_and_constants() {
