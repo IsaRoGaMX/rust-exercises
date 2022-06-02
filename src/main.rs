@@ -1,7 +1,10 @@
+use std::u8;
+
 fn main() {
     println!("Hello Rustaceans!");
 
     variables_and_constants();
+    scalar_data_types();
 }
 
 fn variables_and_constants() {
@@ -26,4 +29,42 @@ fn variables_and_constants() {
 
     let shadowed_variable = 7;
     println!("Shadowed variable final value: {}", shadowed_variable);
+}
+
+fn scalar_data_types() {
+    println!("\r\n== 02. Variables and constants ==");
+
+    let i8_var: i8 = i8::MAX;
+    let u8_var: u8 = u8::MAX;
+    println!("i8 max value: {}, u8 max value: {}", i8_var, u8_var);
+
+    
+    let i16_var: i16 = i16::MAX;
+    let u16_var: u16 = u16::MAX;
+    println!("i16 max value: {}, u16 max value: {}", i16_var, u16_var);
+
+    let i32_var: i32 = i32::MAX;
+    let u32_var: u32 = u32::MAX;
+    println!("i32 max value: {}, u32 max value: {}", i32_var, u32_var);
+
+    let i64_var: i64 = i64::MAX;
+    let u64_var: u64 = u64::MAX;
+    println!("i64 max value: {}, u64 max value: {}", i64_var, u64_var);
+
+    let i128_var: i128 = i128::MAX;
+    let u128_var: u128 = u128::MAX;
+    println!("i128 max value: {}, u128 max value: {}\r\n", i128_var, u128_var);
+
+    let f32_var: f32 = f32::MAX;
+    let f64_var: f64 = f64::MAX;
+    println!("f32 max value: {}, f64 max value: {}\r\n", f32_var, f64_var);
+
+    let implicit_bool_variable = false;
+    let explicit_bool_variable: bool = true;
+    println!("Implicit variable value: {}, Explicitd variable value: {}\r\n", implicit_bool_variable, explicit_bool_variable);
+    
+    let c = 'z';
+    let z = 'ℤ';
+    let emoji = '😻';
+    println!("ASCII char: {}, Unicode char: {}, Emoji: {}", c, z, emoji);
 }
