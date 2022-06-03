@@ -5,6 +5,7 @@ fn main() {
 
     variables_and_constants();
     scalar_data_types();
+    compound_types();
 }
 
 fn variables_and_constants() {
@@ -68,3 +69,28 @@ fn scalar_data_types() {
     let emoji = '😻';
     println!("ASCII char: {}, Unicode char: {}, Emoji: {}", c, z, emoji);
 }
+
+fn compound_types() {
+    println!("\r\n== 03. Compond Types ==");
+
+    // implicit tuple
+    let tuple = (200.34, 87, -344.9);
+    let (x, y, z) = tuple; // destructiring
+    println!("Player 1 Coords: ({}, {}, {})", x, y, z);
+
+    // explicit tuple
+    let tuple_two: (f32, f32, f32) = (-128.12, 98.0, 123.01);
+    println!("Player 2 Coords: ({}, {}, {})", tuple_two.0, tuple_two.1, tuple_two.2);
+
+    // implicit array
+    let implicit_array = [1, 2, 3, 4];
+    println!("Implicit array: {}", implicit_array.map(|n| n.to_string()).join(","));
+
+    // explicit array
+    let explicit_array: [i32; 4] = [1, 2, 3, 4];
+    println!("Explicit array: {}", explicit_array.map(|n| n.to_string()).join(","));
+
+    let array_zero = [0; 5];
+    println!("Initialized array: {}", array_zero.map(|n| n.to_string()).join(","));
+}
+
